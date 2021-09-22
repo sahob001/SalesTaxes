@@ -4,10 +4,12 @@ public class Good {
 
     private Double price;
     private String type;
+    private Boolean imported;
 
-    public Good(Double price, String type) {
+    public Good(Double price, String type, Boolean imported) {
         this.price = price;
         this.type = type;
+        this.imported = imported;
     }
 
     public Double getPrice() {
@@ -16,8 +18,13 @@ public class Good {
 
     // Calculate Taxes
     public Double calculateTaxesPrice() {
-        if (type.equals("Book") || type.equals("Food") || type.equals("MedicalProduct"))
+        if (type.equals("Book") || type.equals("Food") || type.equals("MedicalProduct")) {
+            if (imported == true)
+                return roundDouble((5 * price / 100) + price, 2);
             return price;
+        } else if (imported == true) {
+            return roundDouble((15 * price / 100) + price, 2);
+        }
         return roundDouble((10 * price / 100) + price, 2);
     }
 
