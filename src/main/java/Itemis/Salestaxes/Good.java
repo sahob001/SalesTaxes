@@ -1,32 +1,30 @@
 package Itemis.Salestaxes;
 
-public class Good {
+public abstract class Good {
 
     private Double price;
-    private String type;
     private Boolean imported;
 
-    public Good(Double price, String type, Boolean imported) {
+    public Good(Double price, Boolean imported) {
         this.price = price;
-        this.type = type;
         this.imported = imported;
+    }
+
+    public Good(Double price) {
+        this.price = price;
+        imported = false;
     }
 
     public Double getPrice() {
         return price;
     }
 
-    // Calculate Taxes
-    public Double calculateTaxesPrice() {
-        if (type.equals("Book") || type.equals("Food") || type.equals("MedicalProduct")) {
-            if (imported == true)
-                return roundDouble((5 * price / 100) + price, 2);
-            return price;
-        } else if (imported == true) {
-            return roundDouble((15 * price / 100) + price, 2);
-        }
-        return roundDouble((10 * price / 100) + price, 2);
+    public Boolean getImported() {
+        return imported;
     }
+
+    // Calculate Taxes
+    abstract Double calculateTaxesPrice();
 
     // round by decimal places
     public Double roundDouble(final Double number, final int decimalPlaces) {
