@@ -6,7 +6,7 @@
 * [Usage - Console](#usage-\--console)
 
 ## General info
-In this project, the first problem "Sales Taxes" was solved using TDD. 
+In this project, the first problem ***Sales Taxes*** was solved using **T**est **D**riven **D**evelopment (TDD). It is assumed that no REST API is needed and only the business logic should be tested and implemented.
 	
 ## What you need
 To successfully run the project, you need following:
