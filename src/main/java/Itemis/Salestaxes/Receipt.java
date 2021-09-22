@@ -32,7 +32,14 @@ public class Receipt {
     }
 
     public void print() {
-        System.out.println("\n\n\nAUSGABE-----------------------------------------------\n\n\n\n");
+        System.out.println("Output: ");
+        for (int i = 0; i < goods.size(); i++) {
+            System.out.println("> " + goods.get(i).getQuantity() + " " + goods.get(i).getName() + " at "
+                    + goods.get(i).calculateTaxesPrice());
+
+        }
+        System.out.println("> Sales Taxes: " + salesTaxes);
+        System.out.println("> Total: " + total + "\n");
     }
 
 }
