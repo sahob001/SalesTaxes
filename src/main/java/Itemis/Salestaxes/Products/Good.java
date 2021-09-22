@@ -1,4 +1,4 @@
-package Itemis.Salestaxes;
+package Itemis.Salestaxes.Products;
 
 public abstract class Good {
 
@@ -24,7 +24,7 @@ public abstract class Good {
     }
 
     // Calculate Taxes
-    abstract Double calculateTaxesPrice();
+    public abstract Double calculateTaxesPrice();
 
     // round by decimal places
     public Double roundDouble(final Double number, final int decimalPlaces) {

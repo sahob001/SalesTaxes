@@ -1,4 +1,4 @@
-package Itemis.Salestaxes;
+package Itemis.Salestaxes.Products;
 
 public class OthersProduct extends Good {
 

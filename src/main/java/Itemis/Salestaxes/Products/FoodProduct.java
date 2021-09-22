@@ -1,12 +1,12 @@
-package Itemis.Salestaxes;
+package Itemis.Salestaxes.Products;
 
-public class BookProduct extends Good {
+public class FoodProduct extends Good {
 
-    public BookProduct(Double price, Boolean imported) {
+    public FoodProduct(Double price, Boolean imported) {
         super(price, imported);
     }
 
-    public BookProduct(Double price) {
+    public FoodProduct(Double price) {
         super(price);
     }
 

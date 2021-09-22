@@ -1,12 +1,12 @@
-package Itemis.Salestaxes;
+package Itemis.Salestaxes.Products;
 
-public class FoodProduct extends Good {
+public class MedicalProduct extends Good {
 
-    public FoodProduct(Double price, Boolean imported) {
+    public MedicalProduct(Double price, Boolean imported) {
         super(price, imported);
     }
 
-    public FoodProduct(Double price) {
+    public MedicalProduct(Double price) {
         super(price);
     }
 
